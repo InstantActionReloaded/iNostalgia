@@ -1,0 +1,72 @@
+/* GENERAL STYLING */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #000000, #0a0a0a);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* CINEMATIC SCENE */
+.scene {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.scene h1 {
+  font-size: 60px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #ffcc00;
+  text-shadow: 0 0 20px #ffcc00, 0 0 40px #ffcc00;
+  animation: glow 2s ease-in-out infinite alternate, fadeIn 3s ease-in;
+}
+
+.scene .beta {
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: #888;
+  margin-top: -10px;
+  text-transform: uppercase;
+  animation: fadeIn 3s ease-in;
+}
+
+/* INPUT CONTROLS */
+.controls input {
+  padding: 10px;
+  font-size: 16px;
+  width: 200px;
+  border: none;
+  border-radius: 5px;
+}
+
+.controls button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #ffcc00;
+  color: black;
+  font-weight: bold;
+}
+
+.controls button:hover {
+  background-color: #e6b800;
+}
+
+/* ANIMATIONS */
+@keyframes glow {
+  from { text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00; }
+  to   { text-shadow: 0 0 20px #ffcc00, 0 0 40px #ffcc00; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
